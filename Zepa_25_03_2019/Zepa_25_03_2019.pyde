@@ -3,10 +3,13 @@ def setup():
     textSize(120)
     textAlign(CENTER)
     background(200,214,200)
-    c =(250,250,250)
     global c
+    global b
+    c =('FFFFFFFF')
+    b =('FF000000')
 def draw():
     global c
+    global b
     if keyPressed == True:
         fill(0)
         if key == 'M' or key == 'm':
@@ -21,6 +24,13 @@ def draw():
         if mousePressed and keyCode==LEFT:
          fill(200,110,13)
          text('D',width/2-120, height/2)
+    if hex(get(mouseX,mouseY)) == c:
+     fill(214,10,13)
+     text('D',width/2-120, height/2)
+    else: 
+        if hex(get(mouseX,mouseY)) == b:
+         fill(228,132,221)
+         text('M',width/2+120, height/2) 
     s = createShape();
     s.beginShape();
     s.fill(0, 0, 255, 115);
