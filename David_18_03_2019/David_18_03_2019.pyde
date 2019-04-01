@@ -15,25 +15,27 @@ def draw():
     global x
     global y
     background(89,147,139);
-    if x >= 0 and x<= 200:
+    if x >= 0 and x<= width/2:
         rect(x,y,50,50)
         x+= 2
         y+= 2.25
-    if x >= 100 and x<= 200:
+    if x >= 100 and x<= width/2:
         rect(x,y,50,50)
         fill(*krotkaKolorow[1])
         x+= 2
         y+= 2.25
-    if x>= 200 and x <= 300:
+    if x>= width/2 and x <= 300:
         fill(*krotkaKolorow[2])
         rect(x,y,50,50)
         x+= 2
         y-= 2.25
     
-    if x>= 300 and x <= 400:
+    if x>= 300 and x <= width:
         fill(*krotkaKolorow[3])
         rect(x,y,50,50)
         x+= 2
         y-= 2.25
+        
+        #exit()?
     
         
