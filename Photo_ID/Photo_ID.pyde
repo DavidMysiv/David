@@ -1,6 +1,5 @@
 add_library('sound')
 add_library('pdf')
-add_library("sound")
 def setup():
     size(648,800)#PDF,"zepa_id.pdf")
     global id_photo
