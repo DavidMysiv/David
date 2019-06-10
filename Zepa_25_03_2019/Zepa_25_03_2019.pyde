@@ -14,23 +14,22 @@ def draw():
         fill(0)
         if key == 'M' or key == 'm':
            text('M', width/2+120, height/2)
-        if mousePressed and keyCode==RIGHT:
+        if key == 'D' or key == 'd':
+           text('D',width/2-120, height/2)
+        if keyCode==RIGHT:
             fill(123,144,231)
             text('M', width/2+120, height/2)
-    else:     
-        if mousePressed:
-         fill(255,255,255)
-         text('D',width/2-120, height/2)
-        if mousePressed and keyCode==LEFT:
-         fill(200,110,13)
-         text('D',width/2-120, height/2)
-    if hex(get(mouseX,mouseY)) == c:
-     fill(214,10,13)
-     text('D',width/2-120, height/2)
-    else: 
-        if hex(get(mouseX,mouseY)) == b:
-         fill(228,132,221)
-         text('M',width/2+120, height/2) 
+        if keyCode==LEFT:
+            fill(200,110,13)
+            text('D',width/2-120, height/2)
+    else:
+        if hex(get(mouseX,mouseY)) == c: # to nie zawsze zadziała, bo kolor może być już zmieniony przez coś innego
+            fill(214,10,13)
+            text('D',width/2-120, height/2)
+        else: 
+            if hex(get(mouseX,mouseY)) == b: # to nie zawsze zadziała, bo kolor może być już zmieniony przez coś innego
+                fill(228,132,221)
+                text('M',width/2+120, height/2)
     s = createShape();
     s.beginShape();
     s.fill(0, 0, 255, 115);
